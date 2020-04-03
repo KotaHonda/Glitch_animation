@@ -16,7 +16,7 @@ this glitch.py turns the input image into a corrupted image and a corrupted vide
 ### output image  
 ![result](https://user-images.githubusercontent.com/55595081/78325184-e6333c00-75b1-11ea-936e-737ec1e760ef.jpg)
 ### output video
-Please watch video.mp4
+Please download video.mp4 and watch it  
 
 ## create glitch animation from image
 
