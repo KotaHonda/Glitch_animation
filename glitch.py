@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import random
 import noise
+import sys
 
 class Glitch():
 
@@ -82,8 +83,14 @@ class Glitch():
         
 
 if __name__ == '__main__':
+
     
-    srcImg = cv2.imread("sunset.jpg")
+    input_filename = "sunset.jpg"
+    
+    if len(sys.argv) > 1 : 
+        input_filename = sys.argv[1]
+    
+    srcImg = cv2.imread(input_filename)
 
     grayImg = cv2.cvtColor(srcImg, cv2.COLOR_BGR2GRAY)
     resultImg = cv2.cvtColor(grayImg, cv2.COLOR_GRAY2BGR)

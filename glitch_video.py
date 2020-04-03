@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import random
 import noise
+import sys
 
 class Glitch():
 
@@ -57,7 +58,7 @@ class Glitch():
 
         self.editedImg[pos_y2 : pos_y2 + height, pos_x2 : pos_x2 + width] = rectImg
 
-    def get_image(self, srcImg):
+    def get_image(self, srcImg, strength):
 
         self.originalImg = srcImg.copy()
 
@@ -67,16 +68,16 @@ class Glitch():
         self.editedImg = []
         self.editedImg = self.originalImg.copy()
 
-        if random.randint(1, 15) % 15 < 1:
+        if random.randint(1, 21 - 2 * strength) % (21 - 2 * strength) < 1:
             self.editedImg = self.shift_color(self.editedImg)
 
-        count = random.randint(4, 13)
+        count = random.randint(strength, 10 + strength)
         for _ in range(count):
             self.shift_side()
-        count = random.randint(5, 18)
+        count = random.randint(2 + strength, 12 + 2 * strength)
         for _ in range(count):
             self.enter_line()
-        count = random.randint(0, 4)
+        count = random.randint(max(0, strength - 3), strength)
         for _ in range(count):
             self.rect_image()
 
@@ -84,6 +85,14 @@ class Glitch():
         
 
 if __name__ == '__main__':
+
+    strength = 3
+    
+    if len(sys.argv) > 1:
+        strength = int(sys.argv[1])
+        
+    if strength > 5:
+        strength = 5
 
     capture = cv2.VideoCapture(0)
     fourcc = cv2.VideoWriter_fourcc('m','p','4','v')
@@ -113,7 +122,7 @@ if __name__ == '__main__':
 
         resultImg = noise.shift_image(srcImg)
 
-        resultImg = glitch.get_image(resultImg.astype(np.uint8)) 
+        resultImg = glitch.get_image(resultImg.astype(np.uint8), strength) 
         cv2.imshow('frame',resultImg)
         video.write(resultImg.astype(np.uint8))
 
