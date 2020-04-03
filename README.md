@@ -8,7 +8,7 @@
 (input) $ pip install numpy=1.15.4, opencv-python
 ```
 
-## glitch.pycreate - glitch image
+## glitch.py - create glitch image
 
 this glitch.py turns the input image into a corrupted image and a corrupted video.    
 ### input image  
@@ -27,5 +27,12 @@ If not specified, sunset.jpg will be executed
 
 ## glitch_video.py - create glitch animation from image
 
-glitch_video.py converts the camera image to a damaged image and outputs (displays) it.　　
+glitch_video.py converts the camera image to a damaged image and outputs (displays) it.　
+
+### run program  
+```
+$ python glitch_video.py 3
+```  
+The argument (3) is the damage strength, which can be specified from 0 to 5.
+If not specified, the program will be executed with the default value of 3.
 
