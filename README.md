@@ -10,11 +10,13 @@
 
 ## create glitch image
 
-this glitch.py turns the input image into a corrupted image.    
+this glitch.py turns the input image into a corrupted image and a corrupted video.    
 ### input image  
 ![sunset](https://user-images.githubusercontent.com/55595081/78325182-e3384b80-75b1-11ea-9e16-e78a97991de9.jpg) 
 ### output image  
 ![result](https://user-images.githubusercontent.com/55595081/78325184-e6333c00-75b1-11ea-936e-737ec1e760ef.jpg)
+### output video
+Please watch video.mp4
 
 ## create glitch animation from image
 
