@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
     IMG_SIZE_h, IMG_SIZE_w, _ = srcImg.shape
 
-    fourcc = cv2.VideoWriter_fourcc('h','2','6','4')
+    fourcc = cv2.VideoWriter_fourcc('a','v','c','1')
     video = cv2.VideoWriter('video.mp4', fourcc, 9.0, (IMG_SIZE_w, IMG_SIZE_h))
 
     for _ in range(270):
