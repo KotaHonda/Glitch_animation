@@ -18,6 +18,13 @@ this glitch.py turns the input image into a corrupted image and a corrupted vide
 ### output video
 Please download video.mp4 and watch it  
 
+### run program
+```
+$ python glitch.py image.jpg
+```  
+Please replace this image.jpg with the file path of your favorite image  
+If not specified, sunset.jpg will be executed  
+
 ## create glitch animation from image
 
 glitch_video.py converts the camera image to a damaged image and outputs (displays) it.　　
