@@ -1,5 +1,13 @@
 # Glitch_animation
 
+## operating environment  
+```
+(input) $ python -V
+(output)$ Python 3.6.8
+
+(input) $ pip install numpy=1.15.4, opencv-python
+```
+
 ## create glitch image
 
 this glitch.py turns the input image into a corrupted image.    
@@ -10,6 +18,5 @@ this glitch.py turns the input image into a corrupted image.
 
 ## create glitch animation from image
 
-glitch_video.py generates corrupt video(mp4) by adding lines or displacing parts of the input image.　　
+glitch_video.py converts the camera image to a damaged image and outputs (displays) it.　　
 
-Watch video.mp4
